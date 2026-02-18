@@ -1,0 +1,522 @@
+/* ========================= */
+/* RESET & BODY */
+/* ========================= */
+
+*{
+box-sizing:border-box;
+}
+
+body{
+margin:0;
+font-family:'Poppins',sans-serif;
+background:black;
+color:#EAEAEA;
+overflow-x:hidden;
+perspective:1200px;
+}
+
+
+/* ========================= */
+/* CANVAS BACKGROUND */
+/* ========================= */
+
+#bg{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:-1;
+}
+
+
+/* ========================= */
+/* NAVBAR */
+/* ========================= */
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 40px;
+background:rgba(0,0,0,0.75);
+backdrop-filter:blur(10px);
+position:fixed;
+top:0;
+left:0;
+width:100%;
+z-index:1000;
+}
+
+.logo{
+font-family:'Orbitron',sans-serif;
+color:#FFD700;
+font-size:22px;
+letter-spacing:2px;
+}
+
+
+/* NAV LINKS */
+
+.nav-links{
+display:flex;
+gap:25px;
+}
+
+.nav-links a{
+color:#FFD700;
+text-decoration:none;
+cursor:pointer;
+font-size:15px;
+transition:0.3s;
+}
+
+.nav-links a:hover{
+color:#FFC857;
+text-shadow:0 0 10px #FFD700;
+}
+
+
+/* ========================= */
+/* HAMBURGER */
+/* ========================= */
+
+.menu-toggle{
+display:none;
+font-size:28px;
+color:#FFD700;
+cursor:pointer;
+}
+
+
+/* ========================= */
+/* SECTION */
+/* ========================= */
+
+.section{
+display:none;
+min-height:100vh;
+padding:120px 30px 60px;
+text-align:center;
+opacity:0;
+transform:translateY(40px);
+transition:all 0.8s ease;
+}
+
+.section.active{
+display:block;
+opacity:1;
+transform:translateY(0);
+}
+
+
+/* ========================= */
+/* TEXT */
+/* ========================= */
+
+.gold{
+color:#FFD700;
+}
+
+h1{
+font-size:48px;
+margin-bottom:10px;
+}
+
+h2{
+font-size:28px;
+color:#FFD700;
+margin-bottom:15px;
+}
+
+h3{
+color:#FFC857;
+}
+
+p{
+color:#B8B8B8;
+font-size:16px;
+line-height:1.6;
+}
+
+
+/* ========================= */
+/* GLOW */
+/* ========================= */
+
+.glow{
+text-shadow:
+0 0 10px gold,
+0 0 20px gold,
+0 0 40px gold,
+0 0 80px rgba(255,215,0,0.5);
+}
+
+
+/* ========================= */
+/* FLOAT ANIMATION */
+/* ========================= */
+
+.float{
+animation:floatAnim 4s infinite ease-in-out;
+}
+
+@keyframes floatAnim{
+0%{transform:translateY(0);}
+50%{transform:translateY(-15px);}
+100%{transform:translateY(0);}
+}
+
+
+/* ========================= */
+/* TYPING */
+/* ========================= */
+
+.typing{
+overflow:hidden;
+white-space:nowrap;
+border-right:3px solid gold;
+margin:auto;
+width:fit-content;
+
+animation:
+typingAnim 3s steps(20),
+blinkAnim 0.7s infinite;
+}
+
+@keyframes typingAnim{
+from{width:0;}
+to{width:100%;}
+}
+
+@keyframes blinkAnim{
+50%{border-color:transparent;}
+}
+
+
+/* ========================= */
+/* CARD */
+/* ========================= */
+
+.card-container{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:25px;
+margin-top:30px;
+}
+
+.card{
+padding:20px;
+border:1px solid gold;
+border-radius:12px;
+background:rgba(255,215,0,0.04);
+max-width:300px;
+width:100%;
+transition:all 0.4s ease;
+}
+
+.card:hover{
+
+transform:
+rotateY(10deg)
+rotateX(10deg)
+scale(1.05);
+
+box-shadow:
+0 0 20px gold,
+0 0 40px rgba(255,215,0,0.4);
+
+}
+
+
+/* ========================= */
+/* HIGHLIGHT BOX */
+/* ========================= */
+
+.highlight-box{
+border:1px solid gold;
+padding:20px;
+margin:20px auto;
+max-width:600px;
+background:rgba(255,215,0,0.04);
+}
+
+
+/* ========================= */
+/* BUTTON */
+/* ========================= */
+
+button{
+padding:12px 25px;
+margin-top:20px;
+background:transparent;
+border:1px solid gold;
+color:gold;
+cursor:pointer;
+transition:0.3s;
+font-size:15px;
+}
+
+button:hover{
+background:gold;
+color:black;
+box-shadow:0 0 20px gold;
+}
+
+
+/* ========================= */
+/* FOOTER */
+/* ========================= */
+
+footer{
+text-align:center;
+padding:20px;
+border-top:1px solid gold;
+color:#FFC857;
+}
+
+
+/* ========================= */
+/* TABLET */
+/* ========================= */
+
+@media(max-width:992px){
+
+.card{
+max-width:45%;
+}
+
+h1{
+font-size:36px;
+}
+
+}
+
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+
+@media(max-width:768px){
+
+.menu-toggle{
+display:block;
+}
+
+.nav-links{
+position:absolute;
+top:60px;
+left:0;
+width:100%;
+background:black;
+flex-direction:column;
+display:none;
+}
+
+.nav-links.show{
+display:flex;
+}
+
+.nav-links a{
+padding:12px;
+border-bottom:1px solid rgba(255,215,0,0.2);
+}
+
+.card-container{
+flex-direction:column;
+}
+
+.card{
+max-width:90%;
+}
+
+h1{
+font-size:28px;
+}
+
+h2{
+font-size:20px;
+}
+
+}
+
+
+/* ========================= */
+/* SMALL MOBILE */
+/* ========================= */
+
+@media(max-width:480px){
+
+.logo{
+font-size:18px;
+}
+
+h1{
+font-size:24px;
+}
+
+h2{
+font-size:18px;
+}
+
+}
+
+
+/* ========================= */
+/* ULTRA 3D CINEMATIC INTRO */
+/* ========================= */
+
+#intro3d{
+
+position:fixed;
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:black;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+
+z-index:99999;
+
+perspective:2000px;
+
+animation:introFadeOut 2s ease 5s forwards;
+
+}
+
+
+/* LIGHT EFFECT */
+
+.intro-light{
+
+position:absolute;
+width:400px;
+height:400px;
+
+background:radial-gradient(gold, transparent);
+
+filter:blur(80px);
+
+animation:introLight 3s ease;
+
+}
+
+
+/* MAIN TEXT */
+
+.intro-text{
+
+font-family:'Orbitron';
+font-size:70px;
+color:#FFD700;
+
+transform:
+translateZ(-2000px)
+scale(0.1);
+
+animation:introTextFly 3s ease forwards;
+
+text-shadow:
+0 0 20px gold,
+0 0 40px gold,
+0 0 80px gold;
+
+}
+
+
+/* SUBTEXT */
+
+.intro-sub{
+
+color:#FFC857;
+margin-top:20px;
+
+opacity:0;
+
+animation:introSubFade 2s ease 2s forwards;
+
+}
+
+
+/* ========================= */
+/* INTRO ANIMATIONS */
+/* ========================= */
+
+@keyframes introTextFly{
+
+0%{
+
+transform:
+translateZ(-2000px)
+scale(0.1);
+
+opacity:0;
+
+}
+
+100%{
+
+transform:
+translateZ(0)
+scale(1);
+
+opacity:1;
+
+}
+
+}
+
+@keyframes introLight{
+
+from{
+transform:scale(0);
+opacity:1;
+}
+
+to{
+transform:scale(3);
+opacity:0;
+}
+
+}
+
+@keyframes introSubFade{
+
+to{
+opacity:1;
+}
+
+}
+
+@keyframes introFadeOut{
+
+to{
+opacity:0;
+visibility:hidden;
+}
+
+}
+.contact-desc{
+margin-top:10px;
+color:#CCC;
+font-size:17px;
+}
+
+.contact-card{
+text-align:center;
+}
+
+@media(max-width:768px){
+
+.contact-desc{
+font-size:15px;
+}
+
+}
