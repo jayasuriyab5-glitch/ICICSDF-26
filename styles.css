@@ -290,3 +290,40 @@ padding:12px;
 border-bottom:1px solid rgba(255,215,0,0.2);
 }
 }
+/* ========================= */
+/* PROFESSIONAL FOOTER */
+/* ========================= */
+
+.conference-footer{
+background:rgba(0,0,0,0.9);
+border-top:1px solid goldenrod;
+padding:40px 20px;
+text-align:center;
+position:relative;
+z-index:10;
+}
+
+.footer-container{
+max-width:900px;
+margin:auto;
+}
+
+.conference-footer h3{
+color:goldenrod;
+margin-bottom:15px;
+letter-spacing:1px;
+}
+
+.footer-line{
+width:120px;
+height:2px;
+background:goldenrod;
+margin:15px auto 25px auto;
+}
+
+.cmt-text{
+font-size:14px;
+line-height:1.8;
+color:#d1d5db;
+text-align:center;
+}
