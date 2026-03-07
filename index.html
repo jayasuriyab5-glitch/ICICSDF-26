@@ -1,199 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>ICICSDF2026 Conference</title>
-<link rel="icon" type="image/png" href="f4.png">
-
-<link rel="stylesheet" href="style.css">
-
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ICICSDF2026 Conference</title>
+  <link rel="icon" type="image/png" href="f4.png" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
 </head>
-
 <body>
 
+  <canvas id="bg"></canvas>
 
+  <nav>
+    <div class="logo">ICICSDF2026</div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
-<!-- NEURAL BACKGROUND -->
-<canvas id="bg"></canvas>
+    <div class="nav-links" id="navLinks">
+      <a onclick="showSection('hero'); closeMenu()">Home</a>
+      <a onclick="showSection('why'); closeMenu()">Why ICICSDF</a>
+      <a onclick="showSection('themes'); closeMenu()">Themes</a>
+      <a onclick="showSection('call'); closeMenu()">Call for paper</a>
+      <a onclick="showSection('publication'); closeMenu()">Publication</a>
+      <a onclick="showSection('bookReveal'); closeMenu()">Book Reveal</a>
+      <a onclick="showSection('register'); closeMenu()">Register</a>
+      <a onclick="showSection('contact'); closeMenu()">Contact</a>
+    </div>
+  </nav>
 
-<!-- NAVBAR -->
-<nav>
-<div class="logo">ICICSDF2026</div>
-<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  <section id="hero" class="section active">
+    <h2>International Conference on Innovations in Computing: Shaping the Digital Future</h2>
+    <p>March 7, 2026 | Hybrid Mode</p>
 
-<div class="nav-links" id="navLinks">
-<a onclick="showSection('hero'); closeMenu()">Home</a>
-<a onclick="showSection('why'); closeMenu()">Why ICICSDF</a>
-<a onclick="showSection('themes'); closeMenu()">Themes</a>
-<a onclick="showSection('call'); closeMenu()">Call for paper</a>
-<a onclick="showSection('publication'); closeMenu()">Publication</a>
-<a onclick="showSection('register'); closeMenu()">Register</a>
-<a onclick="showSection('contact'); closeMenu()">Contact</a>
-</div>
-</nav>
+    <div class="highlight-box">
+      <h3>Organized By</h3>
+      <p>
+        Department of Computer Science & Engineering<br />
+        New Prince Shri Bhavani College of Engineering and Technology<br />
+        NAAC A+ Accredited Institution with NBA Accredited Departments
+      </p>
+    </div>
 
-<!-- HERO -->
-<section id="hero" class="section active">
+    <div class="hero-btn-group">
+      <button onclick="showSection('register')">Register Now</button>
+      <button onclick="openBookReveal()">Reveal Book</button>
+    </div>
+  </section>
 
-<h2>International Conference on Innovations in Computing:Shaping the Digital Future</h2>
-<p>March 7, 2026 | Hybrid Mode</p>
+  <section id="why" class="section">
+    <h2 class="gold">Why ICICSDF2026?</h2>
+    <div class="card-container">
+      <div class="card">Present cutting-edge research</div>
+      <div class="card">Connect with global experts</div>
+      <div class="card">Discover emerging technologies</div>
+      <div class="card">ISBN publication opportunities</div>
+      <div class="card">Collaborate academia & industry</div>
+    </div>
+  </section>
 
-<div class="highlight-box">
-<h3>Organized By</h3>
-<p>
-Department of Computer Science & Engineering<br>
-New Prince Shri Bhavani College of Engineering and Technology<br>
-NAAC A+ Accredited Institution with NBA Accredited Departments
-</p>
-</div>
+  <section id="themes" class="section">
+    <h2 class="gold">Conference Themes</h2>
+    <div class="card-container">
+      <div class="card">Artificial Intelligence & Generative AI</div>
+      <div class="card">Cybersecurity & Zero Trust</div>
+      <div class="card">Cloud, IoT & Smart Systems</div>
+      <div class="card">Blockchain & Web 3.0</div>
+      <div class="card">Big Data & Computer Vision</div>
+    </div>
+  </section>
 
-<button onclick="showSection('register')">Register Now</button>
-</section>
+  <section id="call" class="section">
+    <h2 class="gold">Call for Papers</h2>
+    <div class="card-container">
+      <div class="card">Submission Deadline: Feb 25, 2026</div>
+      <div class="card">Camera Ready: Feb 28, 2026</div>
+      <div class="card">Conference Date: Mar 7, 2026</div>
+    </div>
+  </section>
 
-<!-- WHY -->
-<section id="why" class="section">
-<h2 class="gold">Why ICICSDF2026?</h2>
-<div class="card-container">
-<div class="card">Present cutting-edge research</div>
-<div class="card">Connect with global experts</div>
-<div class="card">Discover emerging technologies</div>
-<div class="card">ISBN publication opportunities</div>
-<div class="card">Collaborate academia & industry</div>
-</div>
-</section>
+  <section id="publication" class="section">
+    <h2 class="gold">Publication Opportunity</h2>
+    <div class="highlight-box">
+      All accepted papers published with ISBN proceedings.<br />
+      Selected papers recommended for journal publication.
+    </div>
+  </section>
 
-<!-- THEMES -->
-<section id="themes" class="section">
-<h2 class="gold">Conference Themes</h2>
-<div class="card-container">
-<div class="card">Artificial Intelligence & Generative AI</div>
-<div class="card">Cybersecurity & Zero Trust</div>
-<div class="card">Cloud, IoT & Smart Systems</div>
-<div class="card">Blockchain & Web 3.0</div>
-<div class="card">Big Data & Computer Vision</div>
-</div>
-</section>
+  <section id="bookReveal" class="section">
+    <h2 class="gold glow">Conference Proceedings Reveal</h2>
+    <p class="reveal-subtitle">Official Book Publication Reveal</p>
 
-<!-- CALL -->
-<section id="call" class="section">
-<h2 class="gold">Call for Papers</h2>
-<div class="card-container">
-<div class="card">Submission Deadline: Feb 25, 2026</div>
-<div class="card">Camera Ready: Feb 28, 2026</div>
-<div class="card">Conference Date: Mar 7, 2026</div>
-</div>
-</section>
+    <div class="highlight-box reveal-intro-box">
+      <p>Click below to begin the ceremonial presentation of the conference proceedings.</p>
+      <div class="hero-btn-group">
+        <button onclick="startRevealSequence()">Begin Reveal</button>
+      </div>
+    </div>
+  </section>
 
-<!-- PUBLICATION -->
-<section id="publication" class="section">
-<h2 class="gold">Publication Opportunity</h2>
-<div class="highlight-box">
-All accepted papers published with ISBN proceedings.<br>
-Selected papers recommended for journal publication.
-</div>
-</section>
+  <div id="revealFullscreen" class="reveal-fullscreen">
+    <div class="reveal-stage">
 
-<!-- REGISTER -->
-<section id="register" class="section">
-<h2 class="gold">Register Now</h2>
-<p class="register-desc">
-Be part of an inspiring global academic gathering.
-</p>
+      <div class="book-scene" id="bookScene">
+        <div class="book-closed" id="bookClosed">
+          <img id="closedBookImg" src="pages/page1.jpg" alt="Front Cover">
+        </div>
 
-<div class="highlight-box register-box">
-<p>📧 Email: icicsdfcse@npsbcet.edu.in</p>
-<p>📍 Hybrid Mode | Global Participation Welcome</p>
+        <div class="book-spread" id="bookSpread">
+          <div class="page left-page">
+            <img id="leftStaticPage" src="pages/page2.jpg" alt="Left Page">
+          </div>
 
-<hr class="register-divider">
+          <div class="page right-page">
+            <img id="rightStaticPage" src="pages/page3.jpg" alt="Right Page">
+          </div>
 
-<h3 class="gold">💳 Registration & Payment Details</h3>
-<p><strong>Account Name:</strong> SANTHI.GB</p>
-<p><strong>Bank:</strong> Indian Overseas Bank</p>
-<p><strong>Account No:</strong> 368001000000566</p>
-<p><strong>Branch:</strong> Kuppusamy Nagar, Chitlapakkam</p>
-<p><strong>IFSC:</strong> IOBA0003680</p>
-<p><strong>GPay:</strong> 9790943843</p>
+          <div class="page flip-page" id="flipPage">
+            <div class="flip-sheet" id="flipSheet">
+              <div class="flip-front">
+                <img id="flipPageImg" src="pages/page3.jpg" alt="Flipping Page Front">
+                <div class="page-gloss"></div>
+              </div>
 
-<hr class="register-divider">
+              <div class="flip-back">
+                <div class="page-back-texture"></div>
+                <div class="page-back-shadow"></div>
+              </div>
+            </div>
 
-<a href="https://forms.gle/5bvwpzdDrT2C1qg38" target="_blank">
-<button class="register-btn">Open Registration Form</button>
-</a>
-</div>
-</section>
+            <div class="flip-shadow" id="flipShadow"></div>
+          </div>
 
-<!-- CONTACT -->
-<section id="contact" class="section">
-<h2 class="gold">Contact Information</h2>
-<p class="contact-desc">
-For any queries regarding ICICSDF2026, please contact:
-</p>
+          <div class="book-spine"></div>
+        </div>
+      </div>
 
-<div class="card-container">
-<div class="card contact-card">
-<h3 class="gold">Dr. R. Ahila</h3>
-<p>
-Professor / CSE<br>
-📞 8778036605<br>
-📧 icicsdfcse@npsbcet.edu.in
-</p>
-</div>
+      <div class="reveal-counter" id="counter">1 / 6</div>
 
-<div class="card contact-card">
-<h3 class="gold">Dr. G. B. Santhi</h3>
-<p>
-Associate Professor / CSE<br>
-📞 9790943843<br>
-📧 icicsdfcse@npsbcet.edu.in
-</p>
-</div>
-</div>
-</section>
+      <div id="finalMessage" class="final-reveal">
+        <h3>The Conference Program Has Officially Commenced</h3>
+        <p>The publication reveal has been successfully completed.</p>
+      </div>
 
-<!-- CMT -->
-<!-- CMT -->
-<section id="cmt" class="section">
-<h2 class="gold">CMT Acknowledgment</h2>
+    </div>
+  </div>
 
-<div class="highlight-box">
-<p>
-The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.
-</p>
-</div>
+  <section id="register" class="section">
+    <h2 class="gold">Register Now</h2>
+    <p class="register-desc">Be part of an inspiring global academic gathering.</p>
 
-</section>
+    <div class="highlight-box register-box">
+      <p>📧 Email: icicsdfcse@npsbcet.edu.in</p>
+      <p>📍 Hybrid Mode | Global Participation Welcome</p>
 
+      <hr class="register-divider" />
 
-<footer class="conference-footer">
+      <h3 class="gold">💳 Registration & Payment Details</h3>
+      <p><strong>Account Name:</strong> SANTHI.GB</p>
+      <p><strong>Bank:</strong> Indian Overseas Bank</p>
+      <p><strong>Account No:</strong> 368001000000566</p>
+      <p><strong>Branch:</strong> Kuppusamy Nagar, Chitlapakkam</p>
+      <p><strong>IFSC:</strong> IOBA0003680</p>
+      <p><strong>GPay:</strong> 9790943843</p>
 
-<div class="footer-container">
+      <hr class="register-divider" />
 
-<h3>Join Us in Shaping the Digital Future</h3>
+      <a href="https://forms.gle/5bvwpzdDrT2C1qg38" target="_blank">
+        <button class="register-btn">Open Registration Form</button>
+      </a>
+    </div>
+  </section>
 
-<div class="footer-line"></div>
+  <section id="contact" class="section">
+    <h2 class="gold">Contact Information</h2>
+    <p class="contact-desc">For any queries regarding ICICSDF2026, please contact:</p>
 
-<p class="cmt-text">
-The Microsoft CMT service was used for managing the peer-reviewing process for this conference.
-This service was provided for free by Microsoft and they bore all expenses, including costs for
-Azure cloud services as well as for software development and support.
-</p>
+    <div class="card-container">
+      <div class="card contact-card">
+        <h3 class="gold">Dr. R. Ahila</h3>
+        <p>
+          Professor / CSE<br />
+          📞 8778036605<br />
+          📧 icicsdfcse@npsbcet.edu.in
+        </p>
+      </div>
 
-</div>
+      <div class="card contact-card">
+        <h3 class="gold">Dr. G. B. Santhi</h3>
+        <p>
+          Associate Professor / CSE<br />
+          📞 9790943843<br />
+          📧 icicsdfcse@npsbcet.edu.in
+        </p>
+      </div>
+    </div>
+  </section>
 
-</footer>
+  <section id="cmt" class="section">
+    <h2 class="gold">CMT Acknowledgment</h2>
+    <div class="highlight-box">
+      <p>
+        The Microsoft CMT service was used for managing the peer-reviewing process for this conference.
+        This service was provided for free by Microsoft and they bore all expenses, including costs for
+        Azure cloud services as well as for software development and support.
+      </p>
+    </div>
+  </section>
 
+  <footer class="conference-footer">
+    <div class="footer-container">
+      <h3>Join Us in Shaping the Digital Future</h3>
+      <div class="footer-line"></div>
+      <p class="cmt-text">
+        The Microsoft CMT service was used for managing the peer-reviewing process for this conference.
+        This service was provided for free by Microsoft and they bore all expenses, including costs for
+        Azure cloud services as well as for software development and support.
+      </p>
+    </div>
+  </footer>
 
-
-<script src="script.js"></script>
-
+  <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
